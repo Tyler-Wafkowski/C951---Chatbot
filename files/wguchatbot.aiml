@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+
+<category>
+    <pattern>*</pattern>
+    <template>Hi! My name is Emily and I'm here to assist you with career development! Can I ask for your name?</template>
+</category>
+
+<category>
+    <pattern>MY NAME IS *</pattern>
+    <template>It's great to meet you, <set name="name"><star /></set>! What can I help you with today?</template>
+</category>
+
+
+<!-- Picking major -->
+<category>
+    <pattern>PICKING A JOB</pattern>
+    <template>
+        Sounds good! What is your current major?
+        
+        <button>
+            <text>Computer Science Major</text>
+            <postback>COMPUTER SCIENCE MAJOR</postback>
+        </button>
+        
+        <button>
+            <text>Not a Computer Science Major</text>
+            <postback>NOT COMPUTER SCIENCE MAJOR</postback>
+        </button>
+    
+    </template>
+</category>
+
+
+<!-- Computer Science Major -->
+<category>
+    <pattern>COMPUTER SCIENCE MAJOR</pattern>
+    <template>
+        
+        Okay, you're a computer science major! Awesome! Do you prefer logic or design?
+        
+        <button>
+            <text>Logic</text>
+            <postback>LOGIC</postback>
+        </button>
+        
+        <button>
+            <text>Design</text>
+            <postback>DESIGN</postback>
+        </button>
+    
+    </template>
+</category>
+
+
+<!-- Logic -->
+<category>
+    <pattern>LOGIC</pattern>
+    <template>
+        Nice! Logic!
+        <split></split>
+        Which one of these options interests you?
+        
+        <button>
+            <text>Websites</text>
+            <postback>WEBSITES</postback>
+        </button>
+        
+        <button>
+            <text>Data</text>
+            <postback>DATA</postback>
+        </button>
+        
+        <button>
+            <text>Mobile Devices</text>
+            <postback>MOBILE</postback>
+        </button>
+        
+        <button>
+            <text>Operating systems</text>
+            <postback>OS</postback>
+        </button>
+    </template>
+</category>
+
+<!-- Websites -->
+<category>
+    <pattern>WEBSITES</pattern>
+    <template>
+        Nice! Websites are very important in this career field.
+        <split></split>
+        Follow this link for more information:
+        
+        <link>
+            <text>Front End Developer</text>
+            <url>https://www.indeed.com/hire/job-description/front-end-developer</url>
+        </link>
+    </template>
+</category>
+
+<!-- DATA -->
+<category>
+    <pattern>DATA</pattern>
+    <template>
+        Nice! Data is the baseline for everything in computer science!
+        <split></split>
+        Follow this link for more information:
+        
+        <link>
+            <text>Data Analyst</text>
+            <url>https://www.indeed.com/hire/job-description/data-analyst</url>
+        </link>
+    </template>
+</category>
+
+<!-- Mobile Devices -->
+<category>
+    <pattern>MOBILE</pattern>
+    <template>
+        Nice! Everyone uses handheld devices nowadays!
+        <split></split>
+        Follow this link for more information:
+        
+        <link>
+            <text>Mobile Developer</text>
+            <url>https://www.glassdoor.com/Job-Descriptions/Mobile-Developer.htm</url>
+        </link>
+    </template>
+</category>
+
+<!-- Operating Systems-->
+<category>
+    <pattern>OS</pattern>
+    <template>
+        Nice! Operating systems are very important!
+        <split></split>
+        Follow this link for more information:
+        
+        <link>
+            <text>Embedded Software Developer</text>
+            <url>https://resources.workable.com/embedded-software-engineer-job-description</url>
+        </link>
+    </template>
+</category>
+
+<!-- Design -->
+<category>
+    <pattern>DESIGN</pattern>
+    <template>
+        Nice! A designer I see!
+        <split></split>
+        Which one of the options interests you?
+        
+        <button>
+            <text>Websites</text>
+            <postback>WEBSITEDESIGN</postback>
+        </button>
+        
+        <button>
+            <text>Games</text>
+            <postback>GAMES</postback>
+        </button>
+    </template>
+</category>
+
+<!--Websites For Design -->
+<category>
+    <pattern>WEBSITEDESIGN</pattern>
+    <template>
+        Nice! Desinging websites is very important for business progression!
+        <split></split>
+        Follow the link for more information:
+        
+        <link>
+            <text>UI/UX Designer</text>
+            <url>https://www.springboard.com/library/ui-ux-design/job-description/</url>
+        </link>
+    </template>
+</category>
+
+<!-- Games -->
+<category>
+    <pattern>GAMES</pattern>
+    <template>
+        Nice! Games are incredibly popular around the world!
+        <split></split>
+        Follow the link for more information:
+        
+        <link>
+            <text>Game Designer</text>
+            <url>https://www.cgspectrum.com/career-pathways/game-designer</url>
+        </link>
+    </template>
+</category>
+
+<!-- Not a Computer Science Major-->
+<category>
+    <pattern>NOT COMPUTER SCIENCE MAJOR</pattern>
+    <template>
+        Okay! Amazing! Do you prefer math or art?
+        
+        <button>
+            <text>Math</text>
+            <postback>MATH</postback>
+        </button>
+        
+        <button>
+            <text>Art</text>
+            <postback>ART</postback>
+        </button>
+    </template>
+</category>
+
+<!-- Math -->
+<category>
+    <pattern>MATH</pattern>
+    <template>
+        Nice! Math is amazing!
+        <split></split>
+        Which one of these interests you?
+        
+        <button>
+            <text>Science</text>
+            <postback>SCIENCE</postback>
+        </button>
+        
+        <button>
+            <text>Structures</text>
+            <postback>STRUCTURES</postback>
+        </button>
+        
+        <button>
+            <text>Money</text>
+            <postback>MONEY</postback>
+        </button>
+    </template>
+</category>
+
+<!-- Science -->
+<category>
+    <pattern>SCIENCE</pattern>
+    <template>
+        Nice! Science is extremely important!
+        <split></split>
+        Follow this link for more information:
+        
+        <link>
+            <text>Physicist</text>
+            <url>https://www.indeed.com/career-advice/careers/what-does-a-physicist-do</url>
+        </link>
+    </template>
+</category>
+
+<!-- Structures -->
+<category>
+    <pattern>STRUCTURES</pattern>
+    <template>
+        Structures! Awesome!
+        <split></split>
+        Follow this link for more information:
+        
+        <link>
+            <text>Engineer</text>
+            <url>https://www.indeed.com/hire/job-description/engineer</url>
+        </link>
+    </template>
+</category>
+
+<!-- Money -->
+<category>
+    <pattern>MONEY</pattern>
+    <template>
+        Money makes the world go round!
+        <split></split>
+        Follow this link for more information:
+        
+        <link>
+            <text>Accountant</text>
+            <url>https://www.indeed.com/hire/job-description/accountant</url>
+        </link>
+    </template>
+</category>
+
+<!-- Art -->
+<category>
+    <pattern>ART</pattern>
+    <template>
+        Art is a wonderful choice!
+        <split></split>
+        Which one of these interests you?
+        
+        <button>
+            <text>Logos</text>
+            <postback>LOGO</postback>
+        </button>
+        
+        <button>
+            <text>Video Games</text>
+            <postback>VIDEOGAMES</postback>
+        </button>
+        
+        <button>
+            <text>Teaching</text>
+            <postback>TEACHING</postback>
+        </button>
+    </template>
+</category>
+
+<!-- Logos -->
+<category>
+    <pattern>LOGOS</pattern>
+    <template>
+        Nice! Logos can really make a brand!
+        <split></split>
+        Follow this link for more information:
+        
+        <link>
+            <text>Graphic Designer</text>
+            <url>https://www.indeed.com/hire/job-description/graphic-designer</url>
+        </link>
+    </template>
+</category>
+
+<!-- Video Games -->
+<category>
+    <pattern>VIDEOGAMES</pattern>
+    <template>
+        Awesome! Video games are fun!
+        <split></split>
+        Follow this link for more information:
+        
+        <link>
+            <text>Video Game Concept Artist</text>
+            <url>https://www.screenskills.com/starting-your-career/job-profiles/games/art/concept-artist/</url>
+        </link>
+    </template>
+</category>
+
+<!-- Teaching -->
+<category>
+    <pattern>TEACHING</pattern>
+    <template>
+        Fantastic! Teaching is so important!
+        <split></split>
+        Follow this link for more information:
+        
+        <link>
+            <text>Art Teacher</text>
+            <url>https://www.applitrack.com/seattlearch/onlineapp/1BrowseFile.aspx?id=23067</url>
+        </link>
+    </template>
+</category>
+
+</aiml>
